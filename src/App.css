@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: Mario;
+  src: url("./SuperMario256.ttf");
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  scroll-behavior: smooth;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  margin: 0;
+  padding: 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.slide {
+  width: 10vw;
+  height: 100vh;
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 400vw;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+}
+.one {
+  background-color: black;
+  font-family: Mario;
+  padding: 80px;
+  color: white;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 40px;
+  width: 100vw;
 }
-
-.App-link {
-  color: #61dafb;
+.two {
+  background: url("bkg2.png");
+  background-size: auto 100vh;
+  background-repeat: repeat-x;
+  width: 100vw;
 }
+.three {
+  background: url("bkg2.png");
+  background-size: auto 100vh;
+  background-repeat: repeat-x;
+  width: 100vw;
+}
+.four {
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  width: 100vw;
+}
+.outer-wrapper {
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+@media (min-width: 320px) {
 }
